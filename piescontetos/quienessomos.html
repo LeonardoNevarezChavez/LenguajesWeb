@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>¿Quienés somos?</title>
+
+<!-- Usar JS "reloj" que incluye funcion obtener_hora() -->
+<script src="/js/reloj.js"></script>
+
+    <!-- Estilos de la empresa-->
+    <link rel="stylesheet" href="css/estilos_empresa.css"/>
+
+<style>
+
+    td {
+        padding:20px;
+    }
+    .google-map {
+     padding-bottom: 50%;
+     position: relative;
+}
+
+.google-map iframe {
+     height: 100%;
+     width: 100%;
+     left: 0;
+     top: 0;
+     position: absolute;
+}
+
+div.b {
+  position: absolute;
+  right: 0;
+  border: 3px solid blue;
+  padding:5px;
+} 
+</style>
+
+  </head>
+  <body onload="obtener_hora()">
+    <h2>¿Quienés somos?</h2>
+    <hr />
+    <div class="b" id="div_reloj">Hora local: </div>
+    <table>
+      <tr>
+        <td style="vertical-align:top;">
+          <p>
+            <img src="imagenes/tec2_entrada.jfif"
+             alt="Entrada Tec2"
+             style="width:322px;height: 157px;">
+          </p>  
+          <p>
+            <strong>Pies contentos</strong> fue fundada hace el 12 de enero de
+            1994. Cumpliendo ya 30 años de servicio y solidez como empresa.
+          </p>
+          <p>Algunas de las marcas que vendemos:</p>
+          <p>
+            <ul type="square">
+                <li>
+                  <a href="https://www.flexi.com.mx/" target="_blank">
+                  <i>Flexi </i> &reg;
+                </a>
+                </li>
+                <li><i>Adidas </i> &reg;</li>
+                <li><i>Nike  </i> &reg;</li>
+            </ul>
+          </p>
+        </td>
+
+        <td style="width:60%">
+<p>Ubicación</p>
+<div class="google-map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.3700691876697!2d-106.10698982543963!3d28.7084844806293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ea43003fde8c0d%3A0x196ee13ec863b11c!2sChihuahua%20Institute%20of%20Technology%20II!5e0!3m2!1sen!2smx!4v1707411994331!5m2!1sen!2smx" 
+    width="600" height="450" style="border:0;" 
+    allowfullscreen="" loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+</div>
+
+        </td>
+      </tr>
+    </table>
+    <p>
+        <a href="inicio1.html">Regresar a inicio</a>
+    </p>
+  </body>
+</html>

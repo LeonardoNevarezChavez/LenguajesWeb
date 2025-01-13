@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora IMC</title>
+
+    <!-- Estilos de la empresa-->
+    <link rel="stylesheet" href="css/estilos_empresa.css" />
+
+    <style>
+      table {
+        width: auto;
+      }
+
+      td {
+        padding: 5px;
+        text-align: center;
+      }
+    </style>
+
+    <script>
+      function calculadoraIMC() {
+        let peso;
+        let altura;
+        let imc;
+
+        peso = parseFloat(document.getElementById("peso").value);
+        altura = parseFloat(document.getElementById("altura").value);
+
+        /* validar números    */
+        if (isNaN(peso) || isNaN(altura)) {
+          alert("Ingresar valores numéricos");
+        } else {
+          imc = peso / (altura * altura);
+          let resultado_imc = "Valor numérico IMC: " + imc;
+          document.getElementById("p_valornumerico_imc").innerHTML =
+            resultado_imc;
+
+          /*Obtener interpretación IMC, mostrar mensaje
+            y generar un "semáforo"   */
+
+          let interpretacion_imc = "";
+          if (imc < 18.5) {
+            /* Peso bajo  */
+            interpretacion_imc = "Peso bajo";
+            /* Color amarillo en párrafo   */
+            document.getElementById(
+              "p_interpretacion_imc"
+            ).style.backgroundColor = "yellow";
+            /*  Mostrar texto de interpretación */
+            document.getElementById("p_interpretacion_imc").innerHTML =
+              "Interpretación IMC: " + interpretacion_imc;
+          } else if (imc >= 18.5 && imc <= 24.9) {
+            /* Peso normal  */
+            interpretacion_imc = "Peso normal";
+            /* Color verde en párrafo   */
+            document.getElementById(
+              "p_interpretacion_imc"
+            ).style.backgroundColor = "green";
+            /*  Mostrar texto de interpretación */
+            document.getElementById("p_interpretacion_imc").innerHTML =
+              "Interpretación IMC: " + interpretacion_imc;
+          } else if (imc > 24.9) {
+            /* Peso con sobrepeso  */
+            interpretacion_imc = "Sobrepeso";
+            /* Color rojo en párrafo   */
+            document.getElementById(
+              "p_interpretacion_imc"
+            ).style.backgroundColor = "red";
+            /*  Mostrar texto de interpretación */
+            document.getElementById("p_interpretacion_imc").innerHTML =
+              "Interpretación IMC: " + interpretacion_imc;
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Calculadora IMC</h2>
+    <hr />
+    <p>
+      Mide tu IMC (Índice de masa corporal) para que tengas una idea de tu
+      estado de salud.
+    </p>
+
+    <table>
+      <tr>
+        <td>Peso (kg):</td>
+        <td>
+          <input type="text" name="peso" id="peso" size="10" />
+        </td>
+      </tr>
+      <tr>
+        <td>Altura (mts):</td>
+        <td>
+          <input type="text" name="altura" id="altura" size="10" />
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <br />
+          <input
+            type="button"
+            value="   Calcular IMC   "
+            onclick="calculadoraIMC()"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p id="p_valornumerico_imc">Valor numérico IMC:</p>
+        </td>
+        <td>
+          <p id="p_interpretacion_imc">Interpretación IMC:</p>
+        </td>
+      </tr>
+    </table>
+
+    <p>
+      <a href="inicio1.html">Inicio</a>
+    </p>
+  </body>
+</html>

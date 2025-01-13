@@ -1,0 +1,73 @@
+/*
+Hoja de estilos para la tabla de productos
+*/
+
+
+/*  Estilos tabla   */
+/*  Acceso a la tabla por su atributo id              */
+#calzado {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/*  Estilos celdas (td) y encabezado (th) de tabla   */
+#calzado td, #calzado th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+/*  Estilos renglones pares (even), los impares son con odd   */
+#calzado tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+
+/* Anchos de columnas */
+#calzado td:nth-child(1){
+    width:25%;
+}
+
+#calzado td:nth-child(2){
+    width:50%;
+}
+
+#calzado td:nth-child(3){
+    width:25%;
+}
+
+
+/*  Responder selector hover CSS al evento cuando el usuario pasa sobre un renglón   */
+#calzado tr:hover {background-color: #ddd;}
+
+/* Estilos renglón de encabezado */
+#calzado th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Tamaño para las imágenes */
+img {
+    width: 100px;
+    height: 100px;
+}
+
+/*  Ampliar imagen al pasar el curso sobre ella  */
+img:hover {
+    width: 120px;
+    height: 120px;
+}
+
+/* Estilos tabla de oferta */
+#tabla_oferta td {
+  padding:10px;
+}
+
+/* Centrar la tabla */
+#tabla_oferta {
+  margin-left: auto;
+  margin-right: auto;
+}
+

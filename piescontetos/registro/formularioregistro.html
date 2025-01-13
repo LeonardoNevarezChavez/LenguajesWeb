@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario registro</title>
+
+<script>
+function checkPassword(form) {
+        const password = form.contrasenia1.value;
+        const confirmPassword = form.contrasenia2.value;
+
+        if (password != confirmPassword) {
+          alert("Error! Password did not match.");
+          return false;
+        } else {
+          alert("Password Match. Congratulations!");
+          return true;
+        }
+      }
+
+</script>
+
+
+  </head>
+  <body>
+    <h2>Formulario de registro</h2>
+    <hr />
+    <p>
+      Proporcionar sus datos para quedar registrado como usuario. Los usuarios
+      registrados pueden acceder a la tienda en línea y recibir promociones
+      especiales.
+    </p>
+
+    <form  method="post"
+    onsubmit="return checkPassword(this)"
+    action="paginareceptora.php">
+      <fieldset>
+        <legend>Datos personales:</legend>
+        <p></p>
+        <label for="apellido">Escriba sus apellidos *</label>
+        <input type="text" name="apellido" id="apellido" 
+            required/>
+        <p></p>
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre" />
+        <p></p>
+        <label for="correo">Correo (se usará como nombre de usuario)</label>
+        <input type="email" name="correo" id="correo" size="50" />
+        <p></p>
+        <label for="contrasenia1">Contraseña</label>
+        <input type="password" name="contrasenia1" id="contrasenia1" />
+        <p></p>
+        <label for="contrasenia2">Confirmar Contraseña</label>
+        <input type="password" name="contrasenia2" id="contrasenia2" />
+
+        <p></p>
+        Género:
+        <input type="radio" name="genero" id="genero_mujer" 
+        value="mujer" />
+        <label for="genero_mujer">Mujer</label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="genero" id="genero_hombre" 
+        value="hombre" />
+        <label for="genero_hombre">Hombre</label>
+
+        <p></p>
+        <label for="fechanac">Fecha nacimiento</label>
+        <input type="date" name="fechanac" id="fechanac" />
+
+        <p></p>
+        <label for="colorpref">Color preferido</label>
+        <input type="color" name="colorpref" id="colorpref" />
+        <p></p>
+        <label for="talla_calzado">Talla calzado (cm)</label>
+        <input
+          type="number"
+          name="talla_calzado"
+          id="talla_calzado"
+          min="5"
+          max="40"
+        />
+        <p></p>
+        <label>Tipos de calzado que le gustan</label>
+        <br />
+        <input
+          type="checkbox"
+          name="tipo_huarache"
+          id="tipo_huarache"
+          value="tipo_huarache"
+        />
+        <label for="tipo_huarache">Huarache</label>
+        <br />
+        <input
+          type="checkbox"
+          name="tipo_bota"
+          id="tipo_bota"
+          value="tipo_bota"
+        />
+        <label for="tipo_bota">Bota</label>
+        <br />
+        <input
+          type="checkbox"
+          name="tipo_deportivo"
+          id="tipo_deportivo"
+          value="tipo_deportivo"
+        />
+        <label for="tipo_deportivo">Deportivo</label>
+        <p></p>
+        <input type="submit" value="  Registrar "  >
+      </fieldset>
+    </form>
+    <p></p>
+    <p>
+      <a href="../inicio1.html">Inicio</a>
+    </p>
+  </body>
+</html>

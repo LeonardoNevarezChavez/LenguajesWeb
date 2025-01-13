@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guardar Preferencias de Usuario</title>
+
+<script src="js/preferencias.js"></script>
+
+</head>
+<body>
+
+<h2>Preferencias de Usuario con API Web Storage</h2>
+<hr/>
+<p></p>
+<div id="div_nombre">Bienvenido usuario:</div>
+<p></p>
+<label for="nombre">Nombre:</label>
+<input type="text" name="nombre" id="nombre"/>
+<p></p>
+<label for="color">Color de Fondo:</label>
+<select id="color">
+  <option value="white">Blanco</option>
+  <option value="lightblue">Azul Claro</option>
+  <option value="lightgreen">Verde Claro</option>
+</select>
+<p></p>
+<label for="fontSize">Tamaño de Fuente:</label>
+<select id="fontSize">
+  <option value="small">Pequeño</option>
+  <option value="medium">Mediano</option>
+  <option value="large">Grande</option>
+</select>
+<p></p>
+<button onclick="guardarPreferencias()">Guardar Preferencias</button>
+
+</body>
+</html>

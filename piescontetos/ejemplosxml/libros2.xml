@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libros>
+    <libro>
+        <titulo>El lenguaje HTML</titulo>
+        <autor>David Juarez</autor>
+        <categoria>Tecnología</categoria>
+        <editorial>Pearson</editorial>
+        <precio>880</precio>
+    </libro>
+      <libro>
+        <titulo>El lenguaje CSS3</titulo>
+        <autor>Reina Reyes</autor>
+        <categoria>Tecnología</categoria>
+        <editorial>Pearson</editorial>
+        <precio>950</precio>
+    </libro>
+
+</libros>
+
+
+
+
+

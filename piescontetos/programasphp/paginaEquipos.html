@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Página de equipos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>Página de equipos.</div>
+        <p>Formulario de "equipos", para
+        ingresar información del usuario
+        en un formulario HTML que será
+        enviado al servidor.</p>
+        <hr>
+        <form name="forma1" id="forma1"
+              method="post" 
+              action="equiposPHP.php">
+            <table border="1">
+                <tr>
+                    <td>
+                        Nombre:
+                        <input type="text" name="nombre"
+                               id="nombre"> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Correo electrónico:
+                        <input type="email" name="email"
+                               id="email"> 
+                    </td>
+                </tr>
+                 <tr>
+                    <td>
+                        Equipo favorito:
+                        <select name="equipo">
+                            <option  selected value="America">
+                                América
+                            </option>
+                             <option   value="CruzAzul">
+                                Cruz Azul
+                            </option>
+                             <option   value="Chivas">
+                                Chivas
+                            </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Enviar">
+                                
+                               
+                    </td>
+                    <td></td>
+                </tr>
+                
+            </table>
+        </form>
+    </body>
+</html>

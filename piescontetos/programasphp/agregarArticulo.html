@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Agregar Articulo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1 align="center">Agregar articulo</h1>
+        <p>Se usa un formulario HTML para capturar los datos 
+        de un articulo, que se envian a una página PHP.</p>
+        <hr>
+        <form id="forma1" name="forma1"
+              method="post" action="agregarArticulo.php">
+        <table border="1">
+            <tr>
+                <td>
+                    ID del Articulo: 
+                </td>
+                <td>
+                    <input type="number" name="idArticulo">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Nombre de Articulo: 
+                </td>
+                <td>
+                    <input type="text" name="nomArticulo">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Descripcion de Articulo: 
+                </td>
+                <td>
+                    <input type="text" name="desArticulo">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Precio de Articulo: 
+                </td>
+                <td>
+                    <input type="number" name="precio">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ID de Categoria: 
+                </td>
+                <td>
+                    <input type="number" name="idCat">
+                </td>
+            </tr>
+        </table>
+            <input type="submit" value="Enviar">
+        </form>    
+    </body>
+</html>
